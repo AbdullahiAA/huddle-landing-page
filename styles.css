@@ -6,10 +6,13 @@
 }
 
 body {
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
   background-color: #674baf;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 .container {
@@ -36,7 +39,7 @@ main .top-section .top-section__left {
 }
 
 main .top-section .top-section__left img {
-  width: 80%;
+  width: 90%;
 }
 
 main .top-section .top-section__right {
@@ -53,6 +56,7 @@ main .top-section .top-section__right h1 {
 main .top-section .top-section__right p {
   font-size: 1em;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 main .top-section .top-section__right .top-section__btn {
@@ -65,8 +69,8 @@ main .top-section .top-section__right .top-section__btn {
   border-radius: 50px;
   margin-top: 10px;
   display: inline-block;
-  -webkit-box-shadow: 3px 4px 14px 3px rgba(0, 0, 0, 0.3), 3px 4px 4px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 4px 14px 3px rgba(0, 0, 0, 0.3), 3px 4px 4px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -74,6 +78,8 @@ main .top-section .top-section__right .top-section__btn {
 main .top-section .top-section__right .top-section__btn:hover {
   background-color: #e882e8;
   color: white;
+  -webkit-box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.3);
 }
 
 main .social-icons {
@@ -84,10 +90,10 @@ main .social-icons {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15px;
-  margin-bottom: 50px;
 }
 
-main .social-icons div {
+main .social-icons a {
+  text-decoration: none;
   border: 1px solid white;
   border-radius: 50%;
   width: 38px;
@@ -96,16 +102,82 @@ main .social-icons div {
   display: grid;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  color: white;
 }
 
-main .social-icons div i {
+main .social-icons a i {
   margin: auto;
   font-size: 1em;
   font-weight: 200;
 }
 
-main .social-icons div:hover {
+main .social-icons a:hover {
   border-color: #e882e8;
   color: #e882e8;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer .attribution a {
+  color: white;
+}
+
+@media screen and (min-width: 630px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+  }
+  header .logo {
+    width: 150px;
+  }
+  main {
+    text-align: left;
+  }
+  main .top-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 6fr 6fr;
+        grid-template-columns: 6fr 6fr;
+    margin-bottom: 20px;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .top-section .top-section__left img {
+    width: 100%;
+  }
+  main .top-section .top-section__right .top-section__btn {
+    padding: 12px 15%;
+  }
+  main .social-icons {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 870px) {
+  main .top-section {
+    -ms-grid-columns: 7fr 5fr;
+        grid-template-columns: 7fr 5fr;
+  }
+  main .top-section .top-section__right h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
