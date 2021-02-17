@@ -1,0 +1,31 @@
+$violet: hsl(257, 40%, 49%);
+$softMagenta: hsl(300, 69%, 71%);
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $violet;
+    color: white;
+}
+
+.container {
+    max-width: 1440px;
+    width: 95%;
+    background-color: $softMagenta;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+header {
+    .logo {
+        width: 100px;
+    }
+}
+
+main {
+    
+}

@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #674baf;
+  color: white;
+}
+
+.container {
+  max-width: 1440px;
+  width: 95%;
+  background-color: #e882e8;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+header .logo {
+  width: 100px;
+}
+/*# sourceMappingURL=styles.css.map */
