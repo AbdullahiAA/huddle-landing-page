@@ -8,17 +8,104 @@
 body {
   background-color: #674baf;
   color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 .container {
   max-width: 1440px;
   width: 95%;
-  background-color: #e882e8;
   margin: 20px auto;
   padding: 15px;
 }
 
 header .logo {
   width: 100px;
+}
+
+main {
+  text-align: center;
+}
+
+main .top-section {
+  margin-bottom: 80px;
+}
+
+main .top-section .top-section__left {
+  margin-bottom: 30px;
+}
+
+main .top-section .top-section__left img {
+  width: 80%;
+}
+
+main .top-section .top-section__right {
+  margin-bottom: 30px;
+}
+
+main .top-section .top-section__right h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+main .top-section .top-section__right p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+main .top-section .top-section__right .top-section__btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  color: #674baf;
+  background-color: white;
+  padding: 12px 25%;
+  border-radius: 50px;
+  margin-top: 10px;
+  display: inline-block;
+  -webkit-box-shadow: 3px 4px 14px 3px rgba(0, 0, 0, 0.3), 3px 4px 4px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 4px 14px 3px rgba(0, 0, 0, 0.3), 3px 4px 4px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .top-section .top-section__right .top-section__btn:hover {
+  background-color: #e882e8;
+  color: white;
+}
+
+main .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+main .social-icons div {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .social-icons div i {
+  margin: auto;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+main .social-icons div:hover {
+  border-color: #e882e8;
+  color: #e882e8;
 }
 /*# sourceMappingURL=styles.css.map */
