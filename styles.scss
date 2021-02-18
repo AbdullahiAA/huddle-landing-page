@@ -10,6 +10,7 @@ $softMagenta: hsl(300, 69%, 71%);
 body {
     background-image: url(./images/bg-mobile.svg);
     background-repeat: no-repeat;
+    background-size: 100%;
     background-color: $violet;
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -31,82 +32,83 @@ header {
 }
 
 main {
-    text-align: center;
+    text-align: center; 
+}
 
-    .top-section {
-        margin-bottom: 80px;
+.top-section {
+    margin-bottom: 80px;
 
-        .top-section__left {
-            margin-bottom: 30px;
+    .top-section__left {
+        margin-bottom: 30px;
 
-            img {
-                width: 90%;
-            }
-        }
-
-        .top-section__right {
-            margin-bottom: 30px;
-
-            h1 {
-                font-family: 'Poppins', sans-serif;
-                font-size: 1.7em;
-                font-weight: 600;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 1em;
-                margin-bottom: 20px;
-                line-height: 1.5;
-            }
-
-            .top-section__btn {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 200;
-                text-decoration: none;
-                color: $violet;
-                background-color: white;
-                padding: 12px 25%;
-                border-radius: 50px;
-                margin-top: 10px;
-                display: inline-block;
-                box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.15);
-                transition: all 0.2s ease-in-out;
-
-                &:hover {
-                    background-color: $softMagenta;
-                    color: white;
-                    box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.30);
-                }
-            }
+        img {
+            width: 90%;
         }
     }
 
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        
-        a {
+    .top-section__right {
+        margin-bottom: 30px;
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .top-section__btn {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
             text-decoration: none;
-            border: 1px solid white;
-            border-radius: 50%;
-            width: 38px;
-            height: 38px;
-            display: grid;
+            color: $violet;
+            background-color: white;
+            padding: 15px 25%;
+            border-radius: 50px;
+            margin-top: 10px;
+            display: inline-block;
+            box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.15);
             transition: all 0.2s ease-in-out;
-            color: white;
 
-            i {
-                margin: auto;
-                font-size: 1em;
-                font-weight: 200;
+            &:hover, &:focus {
+                background-color: $softMagenta;
+                color: white;
+                box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.30);
             }
+        }
+    }
+}
 
-            &:hover {
-                border-color: $softMagenta;
-                color: $softMagenta;
-            }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+    a {
+        text-decoration: none;
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        transition: all 0.2s ease-in-out;
+        color: white;
+
+        i {
+            margin: auto;
+            font-size: 1em;
+            font-weight: 200;
+        }
+
+        &:hover, &:focus {
+            border-color: $softMagenta;
+            color: $softMagenta;
         }
     }
 }
@@ -119,9 +121,14 @@ footer {
     
         a {
             color: white;
+
+            &:hover, &:focus {
+                text-decoration: none;
+            }
         }
     }
 }
+
 
 @media screen and (min-width: 630px) {
     body {
@@ -130,43 +137,44 @@ footer {
     }
 
     header .logo {
-        width: 150px;
+        width: 200px;
     }
 
     main {
         text-align: left;
+    }
 
-        .top-section {
-            display: grid;
-            grid-template-columns: 6fr 6fr;
-            margin-bottom: 20px;
-            column-gap: 50px;
-            justify-content: center;
-            align-items: center;
+    .top-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 20px;
+        column-gap: 50px;
+        justify-content: center;
+        align-items: center;
 
-            .top-section__left img {
-                width: 100%;
-            }
-
-            .top-section__right {
-                .top-section__btn {
-                    padding: 12px 15%;
-                }
-            }
+        .top-section__left img {
+            width: 100%;
         }
 
-        .social-icons {
-            justify-content: flex-end;
+        .top-section__right {
+            .top-section__btn {
+                padding: 15px 15%;
+            }
         }
+    }
+
+    .social-icons {
+        justify-content: flex-end;
     }
 }
 
 @media screen and (min-width: 870px) {
-    main .top-section {
+    .top-section {
         grid-template-columns: 7fr 5fr;
 
         .top-section__right h1 {
-            font-size: 2em;
+            font-size: 2.3em;
+            line-height: 1.7;
         }
     }
 }
@@ -174,5 +182,10 @@ footer {
 @media screen and (min-width: 1024px) {
     .container {
         width: 90%;
+    }
+
+    .top-section .top-section__right p {
+        font-size: 1.1em;
+        line-height: 1.7;
     }
 }

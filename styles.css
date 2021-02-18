@@ -8,6 +8,7 @@
 body {
   background-image: url(./images/bg-mobile.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
   background-color: #674baf;
   color: white;
   font-family: 'Open Sans', sans-serif;
@@ -30,42 +31,43 @@ main {
   text-align: center;
 }
 
-main .top-section {
+.top-section {
   margin-bottom: 80px;
 }
 
-main .top-section .top-section__left {
+.top-section .top-section__left {
   margin-bottom: 30px;
 }
 
-main .top-section .top-section__left img {
+.top-section .top-section__left img {
   width: 90%;
 }
 
-main .top-section .top-section__right {
+.top-section .top-section__right {
   margin-bottom: 30px;
 }
 
-main .top-section .top-section__right h1 {
+.top-section .top-section__right h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.7em;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-main .top-section .top-section__right p {
+.top-section .top-section__right p {
   font-size: 1em;
   margin-bottom: 20px;
   line-height: 1.5;
+  font-weight: 400;
 }
 
-main .top-section .top-section__right .top-section__btn {
+.top-section .top-section__right .top-section__btn {
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   text-decoration: none;
   color: #674baf;
   background-color: white;
-  padding: 12px 25%;
+  padding: 15px 25%;
   border-radius: 50px;
   margin-top: 10px;
   display: inline-block;
@@ -75,14 +77,14 @@ main .top-section .top-section__right .top-section__btn {
   transition: all 0.2s ease-in-out;
 }
 
-main .top-section .top-section__right .top-section__btn:hover {
+.top-section .top-section__right .top-section__btn:hover, .top-section .top-section__right .top-section__btn:focus {
   background-color: #e882e8;
   color: white;
   -webkit-box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.3);
 }
 
-main .social-icons {
+.social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +94,7 @@ main .social-icons {
   gap: 15px;
 }
 
-main .social-icons a {
+.social-icons a {
   text-decoration: none;
   border: 1px solid white;
   border-radius: 50%;
@@ -105,13 +107,13 @@ main .social-icons a {
   color: white;
 }
 
-main .social-icons a i {
+.social-icons a i {
   margin: auto;
   font-size: 1em;
   font-weight: 200;
 }
 
-main .social-icons a:hover {
+.social-icons a:hover, .social-icons a:focus {
   border-color: #e882e8;
   color: #e882e8;
 }
@@ -126,22 +128,26 @@ footer .attribution a {
   color: white;
 }
 
+footer .attribution a:hover, footer .attribution a:focus {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 630px) {
   body {
     background-image: url(./images/bg-desktop.svg);
     background-size: cover;
   }
   header .logo {
-    width: 150px;
+    width: 200px;
   }
   main {
     text-align: left;
   }
-  main .top-section {
+  .top-section {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 6fr 6fr;
-        grid-template-columns: 6fr 6fr;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
     -webkit-column-gap: 50px;
             column-gap: 50px;
@@ -152,13 +158,13 @@ footer .attribution a {
         -ms-flex-align: center;
             align-items: center;
   }
-  main .top-section .top-section__left img {
+  .top-section .top-section__left img {
     width: 100%;
   }
-  main .top-section .top-section__right .top-section__btn {
-    padding: 12px 15%;
+  .top-section .top-section__right .top-section__btn {
+    padding: 15px 15%;
   }
-  main .social-icons {
+  .social-icons {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -166,18 +172,23 @@ footer .attribution a {
 }
 
 @media screen and (min-width: 870px) {
-  main .top-section {
+  .top-section {
     -ms-grid-columns: 7fr 5fr;
         grid-template-columns: 7fr 5fr;
   }
-  main .top-section .top-section__right h1 {
-    font-size: 2em;
+  .top-section .top-section__right h1 {
+    font-size: 2.3em;
+    line-height: 1.7;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
     width: 90%;
+  }
+  .top-section .top-section__right p {
+    font-size: 1.1em;
+    line-height: 1.7;
   }
 }
 /*# sourceMappingURL=styles.css.map */
